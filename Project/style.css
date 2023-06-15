@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.detBut {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.postTitles {
+
+}

@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.block {
+    background-color: lightblue;
+    width: 80%;
+    height: 40%;
+    border-radius: 15px;
+    margin-left: 3%;
+    margin-top: 3%;
+    border: darkblue solid 3px;
+}
+
+#mainDiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.userInformation {
+    width: 40%;
+}
+
+.Names {
+    width: 90%;
+    font-size: 37px;
+    background-color: deepskyblue;
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.phoneWb {
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.email {
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.company {
+    width: 90%;
+    font-size: 30px;
+    background-color: deepskyblue;
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.adress {
+    width: 90%;
+    font-size: 19px;
+    background-color: deepskyblue;
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.userPosts {
+    margin-top: 3%;
+    width: 60%;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 1%;
+    border: lightblue 0.5px solid ;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    background-color: rgba(127, 255, 212, 0.8);
+}
+
+ul {
+    padding-left: 1%;
+}
+
+.postTitles {
+    background-color: deepskyblue;
+    text-align: center;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 20px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #265301;
+}
+
+a:visited {
+    color: #437A16;
+}
+
+a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+}
+
+.postBut {
+    background-color: lightblue;
+    width: 10%;
+    text-align: center;
+    border-radius: 5px;
+}
