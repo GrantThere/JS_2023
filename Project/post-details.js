@@ -1,22 +1,20 @@
-import {requestData, creatDiv} from './request.js';
-
 let post = localStorage.getItem('postId');
 
 let posurla = `https://jsonplaceholder.typicode.com/posts/${post}`;
 let dPost = requestData(posurla);
 
 dPost.then(post =>{
-    let pt = creatDiv();
+    let pt = document.createElement('div');
     pt.classList.add('allPost');
     document.body.appendChild(pt);
-    let iTit = creatDiv();
+    let iTit = document.createElement('div');
     iTit.classList.add('postTitle');
-    let num = creatDiv();
+    let num = document.createElement('div');
     num.innerText = ` ${post.userId}.${post.id}. `
-    let tit = creatDiv();
+    let tit = document.createElement('div');
     tit.innerText = `${post.title}`;
     iTit.append(num,tit);
-    let bod = creatDiv();
+    let bod = document.createElement('div');
     bod.innerText = `${post.body}`;
     bod.classList.add('postBody');
     pt.append(iTit,bod);
@@ -27,7 +25,7 @@ let commetns = requestData(commentsUrl);
 
 commetns.then(comment => {
     setTimeout(()=>{
-        let commD = creatDiv();
+        let commD = document.createElement('div');
         commD.classList.add('commentsBlock');
         document.body.appendChild(commD);
         let comBut = document.createElement('button');
@@ -40,16 +38,16 @@ commetns.then(comment => {
             for (const commElement of comment) {
                 let cli = document.createElement('li');
                 commLIst.appendChild(cli);
-                let num = creatDiv();
+                let num = document.createElement('div');
                 num.innerText = `${commElement.postId}.${commElement.id}`;
                 num.classList.add('num');
-                let cName = creatDiv();
+                let cName = document.createElement('div');
                 cName.innerText = `${commElement.name}`;
                 cName.classList.add('name');
-                let cEmail = creatDiv();
+                let cEmail = document.createElement('div');
                 cEmail.innerText = `${commElement.email}`;
                 cEmail.classList.add('email');
-                let cBody = creatDiv();
+                let cBody = document.createElement('div');
                 cBody.innerText = `${commElement.body}`;
                 cBody.classList.add('commentBody');
                 cli.append(num,cName,cEmail,cBody);
@@ -58,6 +56,12 @@ commetns.then(comment => {
 
     },600)
 })
+
+async function requestData(url) {
+    let response = await fetch(url)
+        .then(response => response.json());
+    return response;
+}
 
 
 

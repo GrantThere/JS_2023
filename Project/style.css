@@ -1,5 +1,10 @@
 body {
     margin: 0;
+    background-image: linear-gradient(
+            to right,
+            rgba(8, 113, 222, 0.5),
+            rgba(30, 183, 119, 0.5)
+    );
 }
 
 .wrap {

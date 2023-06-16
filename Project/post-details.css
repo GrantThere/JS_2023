@@ -3,6 +3,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(
+            to right,
+            rgba(8, 113, 222, 0.5),
+            rgba(30, 183, 119, 0.5)
+    );
 }
 
 li {

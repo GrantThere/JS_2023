@@ -1,21 +1,20 @@
-import {creatDiv, requestData} from './request.js';
 let urla = 'https://jsonplaceholder.typicode.com/users';
 let users = requestData(urla);
 
 users.then(user => {
     for (const userElement of user) {
         console.log(userElement);
-        let usrD = creatDiv();
+        let usrD = document.createElement('div');
         let line = document.createElement('hr');
         usrD.classList.add('wrap');
         document.body.append(usrD,line);
-        let id = creatDiv();
+        let id = document.createElement('div');
         id.innerText = `${userElement.id}`;
         id.style.fontSize= '20px';
-        let name = creatDiv();
+        let name = document.createElement('div');
         name.innerText = `${userElement.name}`;
         name.style.fontSize= '25px';
-        let detailsBt = creatDiv();
+        let detailsBt = document.createElement('div');
         detailsBt.style.backgroundColor = 'cyan';
         detailsBt.style.borderRadius = '10px';
         let ssl = document.createElement('a');
@@ -31,6 +30,13 @@ users.then(user => {
         }
     }
 });
+
+
+async function requestData(url) {
+    let response = await fetch(url)
+        .then(response => response.json());
+    return response;
+}
 
 
 
